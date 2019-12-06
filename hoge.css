@@ -94,8 +94,6 @@ body{
 .about_contents{
     display: flex;
     flex-wrap: wrap;
-
-    font-family: 'Kosugi Maru', sans-serif;
 }
 
 /* 配置などの要素はクラス全体で定義 */
@@ -126,6 +124,7 @@ body{
 }
 
 .about_text h2{
+    font-family: 'Kosugi Maru', sans-serif;
     font-size: 2.5em;
 }
 
@@ -150,7 +149,7 @@ body{
 }
 
 header {
-    background: url(./img/img4.png) no-repeat;
+    background: url(./img/header.png) no-repeat;
     background-size: cover;
 
     /* ビューポート ブラウザの表示寸法に対する割合 50% */
@@ -190,30 +189,53 @@ header {
     color: #3ff048;
 }
 
-.contents{
-    position: relative;
-}
-
 .contents-header{
     padding: 10px;
     padding-top: 60px;
 }
 
-.section-title{
-    border-bottom: 2px solid #dee7ec;
+.contents-header p{
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 2em;
 }
 
-.contents-item img{
-    height: 400px;
-    width: auto;
+.contents{
+    position: relative;
+    padding-bottom: 3em;
+}
+
+.contents hr{
+    margin-bottom: 1.25em;
+}
+
+.contents p{
+    text-align: center;
+    font-size: 1.3em;
+    padding: 1.2em;
+    padding-top: 0;
 }
 
 .contents-item{
-    float: left;
-    padding-left: 10px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float: center;
 }
 
+.contents-item a{
+    width: 30%;
+    height: 400px;
+    padding: 0 1.5%;
+}
+
+.contents-item img{
+    width: 100%;
+    height: 100%;
+    /* 画像などをボックスにどうはめ込むかを指定する */
+    /* coverでトリミングする */
+    object-fit: cover;
+}
 
 footer{
     width: 100%;
