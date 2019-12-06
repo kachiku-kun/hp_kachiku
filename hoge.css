@@ -152,11 +152,11 @@ header {
     background: url(./img/header.png) no-repeat;
     background-size: cover;
 
-    /* ビューポート ブラウザの表示寸法に対する割合 50% */
-    height: 50vh;
+    /* ビューポート ブラウザの表示寸法に対する割合 30% */
+    height: 30vh;
     position: absolute;
     margin: 0 auto;
-    padding-top: 8em;
+    padding: 6em 0;
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -179,10 +179,14 @@ header {
 }
 
 .main-header h1{
-    font-size: 120px;
-    margin: 10px;
+    font-size: 6em;
+    padding-top: 0.5em;
 
-    padding-top: 30px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .main-header span{
