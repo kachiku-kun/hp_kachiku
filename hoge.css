@@ -1,8 +1,9 @@
 .wf-mplus1p { font-family: 'Kosugi Maru', sans-serif; }
+.wf-mplus1p { font-family: 'M PLUS Rounded 1c', sans-serif;}
 
 body{
-    font-family: "Avenir Next";
-    font-weight: 200;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
     box-sizing: border-box;
 }
 
@@ -10,10 +11,10 @@ body{
     /* スクロールしてもついてくる */
     position: fixed;
     background: rgba(36, 35, 44, 0.55);
-    color: rgba(222, 231, 236, 0.85);
     /* 画面からはみ出したら消える */
     overflow: hidden;
 
+    /* 画面の上、右、左端まで */
     top  : 0;
     right: 0;
     left : 0;
@@ -23,7 +24,8 @@ body{
 }
 
 .header a{
-    color: rgba(222, 231, 236, 0.85);
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     background-color: transparent;
 }
@@ -33,6 +35,7 @@ body{
     float: left;
 
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .header-list li{
@@ -70,8 +73,9 @@ body{
     position: relative;
     /* 中央寄せ */
     text-align: center;
+    /* 字間 */
     /* 可変単位 emは○割みたいなもん 15% */
-    letter-spacing: .15em;
+    letter-spacing: .05em;
     margin-top: 50px;
     margin-bottom: 20px;
 
@@ -107,7 +111,7 @@ body{
 /* 要素そのもののステータスは個別に定義 */
 .about_icon img{
     text-align: center;
-    width: 60%;
+    width: 85%;
     /* まるめるよ */
     border-radius: 60%;
     padding-top: 2em;
@@ -129,8 +133,18 @@ body{
     margin: 1.25em 0;
 }
 
+.about_text p{
+    
+}
+
 .about_social_icon{
     float: right;
+}
+
+.about_social_icon img{
+    width: 50px;
+    height: 50px;
+    padding-left: 30px;
 }
 
 header {
@@ -148,19 +162,19 @@ header {
 }
 
 .copy-container {
-    color: #dee7ec;
+    color: #fff;
     /* 文字の縁取りをしてるよ */
-    text-shadow: 
-        black 2px 0px 0px, black -2px 0px 0px,
-        black 0px -2px 0px, black 0px 2px 0px,
-        black 2px 2px 0px, black -2px 2px 0px,
-        black 2px -2px 0px, black -2px -2px 0px,
-        black 1px 2px 0px, black -1px 2px 0px,
-        black 1px -2px 0px, black -1px -2px 0px,
-        black 2px 1px 0px, black -2px 1px 0px,
-        black 2px -1px 0px, black -2px -1px 0px,
-        black 1px 1px 0px, black -1px 1px 0px,
-        black 1px -1px 0px, black -1px -1px 0px;
+    text-shadow:
+        black 2px 0px 2px, black -2px 0px 2px,
+        black 0px -2px 2px, black 0px 2px 2px,
+        black 2px 2px 2px, black -2px 2px 2px,
+        black 2px -2px 2px, black -2px -2px 2px,
+        black 1px 2px 2px, black -1px 2px 2px,
+        black 1px -2px 2px, black -1px -2px 2px,
+        black 2px 1px 2px, black -2px 1px 2px,
+        black 2px -1px 2px, black -2px -1px 2px,
+        black 1px 1px 2px, black -1px 1px 2px,
+        black 1px -1px 2px, black -1px -1px 2px;
 }
 
 .copy-container h1{
