@@ -57,7 +57,7 @@ body{
 }
 
 /* h1の前に表示される項目 afterもあるぞ */
-.about h1:before {
+.about h1:before, .contents-header h1:before{
     /* 絶対的に位置を決定する */
     position: absolute;
     top: 50%;
@@ -69,7 +69,7 @@ body{
     background-color: #ccc;
 }
 
-.about h1{
+.about h1, .contents-header h1{
     position: relative;
     /* 中央寄せ */
     text-align: center;
@@ -81,7 +81,7 @@ body{
 
 }
 
-.about h1 span{
+.about h1 span, .contents-header h1 span{
     position: relative;
     /* 10% */
     padding: 0 1em;
@@ -94,8 +94,6 @@ body{
 .about_contents{
     display: flex;
     flex-wrap: wrap;
-
-    font-family: 'Kosugi Maru', sans-serif;
 }
 
 /* 配置などの要素はクラス全体で定義 */
@@ -110,11 +108,11 @@ body{
 }
 /* 要素そのもののステータスは個別に定義 */
 .about_icon img{
-    text-align: center;
-    width: 85%;
+    width: 60%;
     /* まるめるよ */
     border-radius: 60%;
     padding-top: 2em;
+    padding-left: 2em;
 }
 
 .about_text{
@@ -126,6 +124,7 @@ body{
 }
 
 .about_text h2{
+    font-family: 'Kosugi Maru', sans-serif;
     font-size: 2.5em;
 }
 
@@ -134,7 +133,9 @@ body{
 }
 
 .about_text p{
-    
+    font-size: 1.6em;
+    /* 行間 */
+    line-height: 1.8em;
 }
 
 .about_social_icon{
@@ -148,7 +149,7 @@ body{
 }
 
 header {
-    background: url(./img/img4.png) no-repeat;
+    background: url(./img/header.png) no-repeat;
     background-size: cover;
 
     /* ビューポート ブラウザの表示寸法に対する割合 50% */
@@ -188,25 +189,53 @@ header {
     color: #3ff048;
 }
 
+.contents-header{
+    padding: 10px;
+    padding-top: 60px;
+}
+
+.contents-header p{
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
 .contents{
-    height: 500px;
+    position: relative;
+    padding-bottom: 3em;
 }
 
-.section-title{
-    border-bottom: 2px solid #dee7ec;
+.contents hr{
+    margin-bottom: 1.25em;
 }
 
-.contents-item img{
-    height: 400px;
-    width: auto;
+.contents p{
+    text-align: center;
+    font-size: 1.3em;
+    padding: 1.2em;
+    padding-top: 0;
 }
 
 .contents-item{
-    float: left;
-    padding-left: 10px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float: center;
 }
 
+.contents-item a{
+    width: 30%;
+    height: 400px;
+    padding: 0 1.5%;
+}
+
+.contents-item img{
+    width: 100%;
+    height: 100%;
+    /* 画像などをボックスにどうはめ込むかを指定する */
+    /* coverでトリミングする */
+    object-fit: cover;
+}
 
 footer{
     width: 100%;
