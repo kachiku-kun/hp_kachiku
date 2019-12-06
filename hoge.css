@@ -1,8 +1,9 @@
 .wf-mplus1p { font-family: 'Kosugi Maru', sans-serif; }
+.wf-mplus1p { font-family: 'M PLUS Rounded 1c', sans-serif;}
 
 body{
-    font-family: "Avenir Next";
-    font-weight: 200;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
     box-sizing: border-box;
 }
 
@@ -10,10 +11,10 @@ body{
     /* スクロールしてもついてくる */
     position: fixed;
     background: rgba(36, 35, 44, 0.55);
-    color: rgba(222, 231, 236, 0.85);
     /* 画面からはみ出したら消える */
     overflow: hidden;
 
+    /* 画面の上、右、左端まで */
     top  : 0;
     right: 0;
     left : 0;
@@ -23,7 +24,8 @@ body{
 }
 
 .header a{
-    color: rgba(222, 231, 236, 0.85);
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     background-color: transparent;
 }
@@ -33,6 +35,7 @@ body{
     float: left;
 
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .header-list li{
@@ -54,7 +57,7 @@ body{
 }
 
 /* h1の前に表示される項目 afterもあるぞ */
-.about h1:before {
+.about h1:before, .contents-header h1:before{
     /* 絶対的に位置を決定する */
     position: absolute;
     top: 50%;
@@ -66,18 +69,19 @@ body{
     background-color: #ccc;
 }
 
-.about h1{
+.about h1, .contents-header h1{
     position: relative;
     /* 中央寄せ */
     text-align: center;
+    /* 字間 */
     /* 可変単位 emは○割みたいなもん 15% */
-    letter-spacing: .15em;
+    letter-spacing: .05em;
     margin-top: 50px;
     margin-bottom: 20px;
 
 }
 
-.about h1 span{
+.about h1 span, .contents-header h1 span{
     position: relative;
     /* 10% */
     padding: 0 1em;
@@ -106,11 +110,11 @@ body{
 }
 /* 要素そのもののステータスは個別に定義 */
 .about_icon img{
-    text-align: center;
     width: 60%;
     /* まるめるよ */
     border-radius: 60%;
     padding-top: 2em;
+    padding-left: 2em;
 }
 
 .about_text{
@@ -129,8 +133,20 @@ body{
     margin: 1.25em 0;
 }
 
+.about_text p{
+    font-size: 1.6em;
+    /* 行間 */
+    line-height: 1.8em;
+}
+
 .about_social_icon{
     float: right;
+}
+
+.about_social_icon img{
+    width: 50px;
+    height: 50px;
+    padding-left: 30px;
 }
 
 header {
@@ -148,19 +164,19 @@ header {
 }
 
 .copy-container {
-    color: #dee7ec;
+    color: #fff;
     /* 文字の縁取りをしてるよ */
-    text-shadow: 
-        black 2px 0px 0px, black -2px 0px 0px,
-        black 0px -2px 0px, black 0px 2px 0px,
-        black 2px 2px 0px, black -2px 2px 0px,
-        black 2px -2px 0px, black -2px -2px 0px,
-        black 1px 2px 0px, black -1px 2px 0px,
-        black 1px -2px 0px, black -1px -2px 0px,
-        black 2px 1px 0px, black -2px 1px 0px,
-        black 2px -1px 0px, black -2px -1px 0px,
-        black 1px 1px 0px, black -1px 1px 0px,
-        black 1px -1px 0px, black -1px -1px 0px;
+    text-shadow:
+        black 2px 0px 2px, black -2px 0px 2px,
+        black 0px -2px 2px, black 0px 2px 2px,
+        black 2px 2px 2px, black -2px 2px 2px,
+        black 2px -2px 2px, black -2px -2px 2px,
+        black 1px 2px 2px, black -1px 2px 2px,
+        black 1px -2px 2px, black -1px -2px 2px,
+        black 2px 1px 2px, black -2px 1px 2px,
+        black 2px -1px 2px, black -2px -1px 2px,
+        black 1px 1px 2px, black -1px 1px 2px,
+        black 1px -1px 2px, black -1px -1px 2px;
 }
 
 .copy-container h1{
@@ -175,7 +191,12 @@ header {
 }
 
 .contents{
-    height: 500px;
+    position: relative;
+}
+
+.contents-header{
+    padding: 10px;
+    padding-top: 60px;
 }
 
 .section-title{
