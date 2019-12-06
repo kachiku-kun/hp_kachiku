@@ -1,0 +1,258 @@
+.wf-mplus1p { font-family: 'Kosugi Maru', sans-serif; }
+.wf-mplus1p { font-family: 'M PLUS Rounded 1c', sans-serif;}
+
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+.header{
+    /* スクロールしてもついてくる */
+    position: fixed;
+    background: rgba(36, 35, 44, 0.55);
+    /* 画面からはみ出したら消える */
+    overflow: hidden;
+
+    /* 画面の上、右、左端まで */
+    top  : 0;
+    right: 0;
+    left : 0;
+
+    /* コンテンツの優先度(1024なので最上位に表示) */
+    z-index: 1024;
+}
+
+.header a{
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.header-logo{
+    font-size: 36px;
+    float: left;
+
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.header-list li{
+    list-style: none;
+    float: left;
+    font-size: 24px;
+
+    padding: 16px 0 0 48px;
+}
+
+.main{
+    /* 相対的に位置を決定する */
+    position: relative;
+    padding: 60px 100px 50px 50px;
+}
+
+.about{
+    text-align: justify;
+}
+
+/* h1の前に表示される項目 afterもあるぞ */
+.about h1:before, .contents-header h1:before{
+    /* 絶対的に位置を決定する */
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+.about h1, .contents-header h1{
+    position: relative;
+    /* 中央寄せ */
+    text-align: center;
+    /* 字間 */
+    /* 可変単位 emは○割みたいなもん 15% */
+    letter-spacing: .05em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.about h1 span, .contents-header h1 span{
+    position: relative;
+    /* 10% */
+    padding: 0 1em;
+    z-index: 2;
+
+    background-color: white;
+
+}
+
+.about_contents{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 配置などの要素はクラス全体で定義 */
+.about_icon{
+
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    text-align: left;
+
+    padding: 20px 0;
+}
+/* 要素そのもののステータスは個別に定義 */
+.about_icon img{
+    width: 60%;
+    /* まるめるよ */
+    border-radius: 60%;
+    padding-top: 2em;
+    padding-left: 2em;
+}
+
+.about_text{
+    /* 寄りと大きさを左側60%にセーブ */
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    position: relative;
+    size: 5em;
+}
+
+.about_text h2{
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 2.5em;
+}
+
+.about_text hr{
+    margin: 1.25em 0;
+}
+
+.about_text p{
+    font-size: 1.6em;
+    /* 行間 */
+    line-height: 1.8em;
+}
+
+.about_social_icon{
+    float: right;
+}
+
+.about_social_icon img{
+    width: 50px;
+    height: 50px;
+    padding-left: 30px;
+}
+
+header {
+    background: url(./img/header.png) no-repeat;
+    background-size: cover;
+
+    /* ビューポート ブラウザの表示寸法に対する割合 50% */
+    height: 50vh;
+    position: absolute;
+    margin: 0 auto;
+    padding-top: 8em;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-header {
+    color: #fff;
+    /* 文字の縁取りをしてるよ */
+    text-shadow:
+        black 2px 0px 2px, black -2px 0px 2px,
+        black 0px -2px 2px, black 0px 2px 2px,
+        black 2px 2px 2px, black -2px 2px 2px,
+        black 2px -2px 2px, black -2px -2px 2px,
+        black 1px 2px 2px, black -1px 2px 2px,
+        black 1px -2px 2px, black -1px -2px 2px,
+        black 2px 1px 2px, black -2px 1px 2px,
+        black 2px -1px 2px, black -2px -1px 2px,
+        black 1px 1px 2px, black -1px 1px 2px,
+        black 1px -1px 2px, black -1px -1px 2px;
+}
+
+.main-header h1{
+    font-size: 120px;
+    margin: 10px;
+
+    padding-top: 30px;
+}
+
+.main-header span{
+    color: #3ff048;
+}
+
+.contents-header{
+    padding: 10px;
+    padding-top: 60px;
+}
+
+.contents-header p{
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
+.contents{
+    position: relative;
+    padding-bottom: 3em;
+}
+
+.contents hr{
+    margin-bottom: 1.25em;
+}
+
+.contents p{
+    text-align: center;
+    font-size: 1.3em;
+    padding: 1.2em;
+    padding-top: 0;
+}
+
+.contents-item{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    float: center;
+}
+
+.contents-item a{
+    width: 30%;
+    height: 400px;
+    padding: 0 1.5%;
+}
+
+.contents-item img{
+    width: 100%;
+    height: 100%;
+    /* 画像などをボックスにどうはめ込むかを指定する */
+    /* coverでトリミングする */
+    object-fit: cover;
+}
+
+.contents-item iframe{
+    width: 40em;
+    height: 25em;
+    /* センタリング */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+footer{
+    width: 100%;
+    background-color: #24232c;
+    color: #dee7ec;
+    text-align: center;
+    padding: 30px 0;
+    bottom: 0;
+}
