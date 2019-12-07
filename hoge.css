@@ -116,7 +116,7 @@ body{
     padding-left: 2em;
 }
 
-.about_text{
+.about_content{
     /* 寄りと大きさを左側60%にセーブ */
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
@@ -124,31 +124,39 @@ body{
     size: 5em;
 }
 
-.about_text h2{
+.about_content h2{
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 2.5em;
+    margin-bottom: .6em;
 }
 
-.about_text hr{
+.about_content hr{
+    position: relative;
     margin: 1.25em 0;
-}
-
-.about_text p{
-    font-size: 1.6em;
-    /* 行間 */
-    line-height: 1.8em;
 }
 
 .about_social_icon{
     position: relative;
-    float: right;
+    float: left;
     margin-right: 1.8em;
 }
 
 .about_social_icon img{
-    width: 1.4em;
-    height: 1.4em;
-    padding-left: .7em;
+    width: 2.6em;
+    height: 2.6em;
+    padding-right: 1.5em;
+}
+
+.about_text{
+    position: relative;
+    float: left;
+}
+
+.about_text p{
+    position: relative;
+    font-size: 1.6em;
+    /* 行間 */
+    line-height: 1.8em;
 }
 
 header {
