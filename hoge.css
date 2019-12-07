@@ -30,6 +30,10 @@ body{
     background-color: transparent;
 }
 
+.header a:hover{
+    color: rgba(196, 196, 196, 0.85);
+}
+
 .header-logo{
     font-size: 36px;
     float: left;
