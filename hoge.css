@@ -28,6 +28,8 @@ body{
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     background-color: transparent;
+
+    transition: .4s;
 }
 
 .header a:hover{
@@ -131,7 +133,10 @@ body{
 .about_content h2{
     font-family: 'Kosugi Maru', sans-serif;
     font-size: 2.5em;
-    margin-bottom: .6em;
+    margin-right: 0px;
+    padding-bottom: .5em;
+
+    display: inline;
 }
 
 .about_content hr{
@@ -141,14 +146,16 @@ body{
 
 .about_social_icon{
     position: relative;
-    float: left;
     margin-right: 1.8em;
+    display: flex;
+
+    margin-top: .55em;
 }
 
 .about_social_icon img{
-    width: 2.6em;
-    height: 2.6em;
-    padding-right: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
+    padding-right: 1.3em;
 }
 
 .about_text{
@@ -223,9 +230,48 @@ header {
     line-height: 2em;
 }
 
+.contents-header a{
+    color: rgb(109, 109, 109);
+
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    font-weight: bolder;
+
+    transition: .4s;
+}
+
+.contents-header a:hover{
+    color:rgb(46, 204, 113);
+}
+
+.contents-header a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(46, 204, 113);
+
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .4s;
+}
+
+.contents-header a:hover::after{
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
 .contents{
     position: relative;
     padding-bottom: 3em;
+}
+
+.contents span{
+    font-weight: bolder;
 }
 
 .contents hr{
@@ -235,7 +281,6 @@ header {
 .contents p{
     text-align: center;
     font-size: 1.3em;
-    padding: 1.2em;
     padding-top: 0;
 }
 
@@ -250,6 +295,20 @@ header {
     width: 30%;
     height: 400px;
     padding: 0 1.5%;
+    overflow: hidden;
+
+}
+
+.contents-item picture img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
+
+.contents-item picture:hover img{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .contents-item img, .contents-item source{
